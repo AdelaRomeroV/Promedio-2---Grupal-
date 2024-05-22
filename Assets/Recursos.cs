@@ -2,17 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Recursos : MonoBehaviour
+public class RecolectarRecursos : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int sandias;
+    public int trigo;
+    public int huesos;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        switch (other.tag)
+        {
+            case "Sandia":
+                sandias++;
+                break;
+            case "Trigo":
+                trigo++;
+                break;
+            case "Hueso":
+                huesos++;
+                break;
+            default:
+                break;
+        }
     }
 }
