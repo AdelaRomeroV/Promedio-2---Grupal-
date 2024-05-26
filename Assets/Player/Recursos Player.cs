@@ -8,5 +8,9 @@ public class RecursosPlayer : MonoBehaviour
     [SerializeField] protected int life;
     [SerializeField] protected int bullet;
     [SerializeField] protected int estruturas;
-    [SerializeField] protected int recursos;
+
+    
+    [SerializeField] protected int sandia;
+    [SerializeField] protected int trigo;
+    [SerializeField] protected int huesos;    
 }
