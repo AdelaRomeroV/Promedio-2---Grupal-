@@ -10,10 +10,10 @@ public class GeneradorDeFrutos : MonoBehaviour
 
     void Update()
     {
-        Shoot();
+        Drop();
     }
 
-    void Shoot()
+    void Drop()
     {
         timer+=Time.deltaTime;
             if(timer>=maxtimer)
