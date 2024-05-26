@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class RecursosPlayer : MonoBehaviour
 {
-   protected int dinero;
-   protected int life;
-   protected int bullet;
-   protected int estruturas;
+   [SerializeField] protected int dinero;
+   [SerializeField] protected int life;
+   [SerializeField] protected int bullet;
+   //[SerializeField] protected int estruturas;
 
     
     protected int sandia;

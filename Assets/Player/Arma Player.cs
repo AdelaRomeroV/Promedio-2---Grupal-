@@ -14,13 +14,15 @@ public class ArmaPlayer : RecursosPlayer
 
     void Shoot()
     {
-        if(bullet > 0)
+        if(bullet >= 0)
         {
             if (Input.GetMouseButton(0)) 
             {
                 GameObject obj = Instantiate(Bullet);
                 obj.transform.position = shootPoint.position;
-                obj.GetComponent<BulletPlayer>().SetDirection(shootPoint.forward);              
+                obj.GetComponent<BulletPlayer>().SetDirection(shootPoint.forward);    
+                Destroy(obj, 2);
+
             }
         }
     }
