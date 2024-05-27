@@ -644,8 +644,9 @@ MonoBehaviour:
   bullet: 10
   Bullet: {fileID: 6564167308682598127, guid: a730133379fdbd449aa1c92fe739ab12, type: 3}
   shootPoint:
-  - {fileID: 2042492507}
-  - {fileID: 497633094}
+  - {fileID: 1166642703}
+  - {fileID: 1261437428}
+  armas: {fileID: 1738760672}
 --- !u!114 &1738760671
 MonoBehaviour:
   m_ObjectHideFlags: 0
