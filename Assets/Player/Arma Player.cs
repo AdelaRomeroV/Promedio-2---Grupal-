@@ -6,6 +6,7 @@ public class ArmaPlayer : RecursosPlayer
 {
     [SerializeField] private GameObject Bullet;
     [SerializeField] private Transform[] shootPoint;
+    [SerializeField] private Armas armas;
 
     private void Update()
     {
@@ -18,14 +19,12 @@ public class ArmaPlayer : RecursosPlayer
         {
              if (Input.GetMouseButton(0))
              {
+                int shootpointIndex = armas.ArmaActive() ? 0 : 1; //solo son 2 armas 
                 GameObject obj = Instantiate(Bullet);
-                obj.transform.position = shootPoint[0].position;
-                obj.GetComponent<BulletPlayer>().SetDirection(shootPoint[0].forward);
+                obj.transform.position = shootPoint[shootpointIndex].position;
+                obj.GetComponent<BulletPlayer>().SetDirection(shootPoint[shootpointIndex].forward);
                 bullet--;
-
-             }
+            }
         }
-       
-
     }
 }

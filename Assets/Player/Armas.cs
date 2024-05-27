@@ -27,4 +27,8 @@ public class Armas : MonoBehaviour
 
         }
     }
+    public bool ArmaActive()
+    {
+        return armaActiva;
+    }
 }
