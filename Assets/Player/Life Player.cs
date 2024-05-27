@@ -8,9 +8,17 @@ public class LifePlayer : Life
     {
         if (other.gameObject.CompareTag("BulletEnemy"))
         {
-            ChangeLife(-other.gameObject.gameObject.GetComponent<Damage>().GetDamage());
+            ChangeLife(-other.gameObject.GetComponent<Damage>().GetDamage());
             Destroy(other.gameObject);
         }
+    }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            ChangeLife(-collision.gameObject.GetComponent<Damage>().GetDamage());
+            Destroy(collision.gameObject);
+        }
     }
 }
