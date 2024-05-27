@@ -6,7 +6,7 @@ public class LifePlayer : Life
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("BulletEnemy"))
+        if (other.gameObject.CompareTag("Bullet Enemy"))
         {
             ChangeLife(-other.gameObject.GetComponent<Damage>().GetDamage());
             Destroy(other.gameObject);
