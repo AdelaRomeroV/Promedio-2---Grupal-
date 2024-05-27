@@ -4,9 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Trigo
-  - Sandia
-  - Huesos
+  - Enemy
+  - Bullet Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
