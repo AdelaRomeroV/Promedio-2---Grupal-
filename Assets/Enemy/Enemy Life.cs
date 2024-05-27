@@ -9,8 +9,8 @@ public class EnemyLife : Life
     {
         if(other.gameObject.CompareTag("Bullet"))
         {
-            ChangeLife(other.gameObject.GetComponent<Damage>().GetDamage());
-                    Destroy(other.gameObject);
+            ChangeLife(-other.gameObject.GetComponent<Damage>().GetDamage());
+            Destroy(other.gameObject);
         }
         
     }

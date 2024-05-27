@@ -18,7 +18,7 @@ public class LifePlayer : Life
         if (collision.gameObject.CompareTag("Enemy"))
         {
             ChangeLife(-collision.gameObject.GetComponent<Damage>().GetDamage());
-            Destroy(collision.gameObject);
+            
         }
     }
 }
