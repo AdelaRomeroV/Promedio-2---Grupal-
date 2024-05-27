@@ -5,24 +5,26 @@ using UnityEngine;
 public class Armas : MonoBehaviour
 {
     [SerializeField] private GameObject[] armas;
+    private bool armaActiva = true;
+
+    private void Start()
+    {
+        if (armas.Length >= 2)
+        {
+            armas[0].SetActive(true);
+            armas[1].SetActive(false);
+        }
+    }
 
     private void Update()
     {
-        GetShoot();
-    }
+        if (Input.GetKeyDown(KeyCode.F) && armas.Length >= 2) 
+        { 
+            armaActiva = !armaActiva;
 
-    protected virtual void GetShoot()
-    {
-        if(Input.GetKey(KeyCode.F))
-        {
-            armas[0].SetActive(false);
-            armas[1].SetActive(true);
-        }
+            armas[0].SetActive(armaActiva);
+            armas[1].SetActive(!armaActiva);
 
-        else
-        {
-            armas[0].SetActive(false);
-            armas[1].SetActive(true);
         }
     }
 }
